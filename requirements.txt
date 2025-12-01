@@ -1,0 +1,5 @@
+snowflake-snowpark-python
+snowflake-cortex
+snowflake-connector-python
+pandas
+python-dotenv
