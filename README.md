@@ -19,25 +19,31 @@ This repository includes:
 - A Snowflake Notebook demo
 - SQL scripts for setting up example datasets & policies
 
----
 
-## 🚀 Architecture
-USER QUESTION
-▼
-INTELLIGENCE AGENT
-(Planning + Reasoning)
-▼
-┌────────────────────────────────────────────┐
-│                 TOOLBELT                   │
-│ SQL Tool │ Document RAG │ Policy Engine │ Actions │
-└────────────────────────────────────────────┘
-▼
-GOVERNANCE AUTOPILOT (Cortext)
-column sensitivity → tags → row policies
-document classification → policy generation
-▼
-ACTION RESULTS + FULL REASONING TRACE
----
+
+                   ┌──────────────────────────┐
+                   │    USER REQUEST          │
+                   └─────────────┬────────────┘
+                                 ▼
+                      ┌──────────────────────┐
+                      │  PLANNING ENGINE     │
+                      └─────────┬────────────┘
+                                ▼
+        ┌───────────────────────────────────────────────────┐
+        │                      TOOLBELT                     │
+        │  SQL  |  RAG  |  POLICIES  |  ACTIONS             │
+        └───────────────────────────────────────────────────┘
+                                ▼
+               ┌──────────────────────────────────────────┐
+               │        GOVERNANCE AUTOPILOT              │
+               │  Cortex classification → tags → RLS      │
+               └──────────────────────────────────────────┘
+                                ▼
+                      ┌──────────────────────┐
+                      │   ACTION RESULTS     │
+                      │   + FULL TRACE       │
+                      └──────────────────────┘
+
 
 ## ✨ Features
 
